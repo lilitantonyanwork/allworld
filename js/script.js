@@ -44,8 +44,8 @@ window.addEventListener('scroll', () => {
 let reviewsSwiper = null;
 
 function initReviewsSwiper() {
-    if (window.innerWidth <= 768) {
-        if (!reviewsSwiper) {
+    // if (window.innerWidth <= 768) {
+    //     if (!reviewsSwiper) {
             reviewsSwiper = new Swiper('.reviews-slider', {
                 slidesPerView: 1,
                 spaceBetween: 20,
@@ -55,8 +55,11 @@ function initReviewsSwiper() {
                     disableOnInteraction: false,
                 },
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: ".swiper-pagination",
                     clickable: true,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                    },
                 },
                 navigation: {
                     nextEl: '.swiper-button-next',
@@ -68,19 +71,19 @@ function initReviewsSwiper() {
                     }
                 }
             });
-        }
-    } else {
-        if (reviewsSwiper) {
-            reviewsSwiper.destroy(true, true);
-            reviewsSwiper = null;
-        }
-        
-        // Для десктопа показываем 3 отзыва
-        const sliderContainer = document.querySelector('.reviews-slider');
-        if (sliderContainer) {
-            sliderContainer.classList.add('desktop-mode');
-        }
-    }
+        // }
+    // } else {
+    //     if (reviewsSwiper) {
+    //         reviewsSwiper.destroy(true, true);
+    //         reviewsSwiper = null;
+    //     }
+    //
+    //     // Для десктопа показываем 3 отзыва
+    //     const sliderContainer = document.querySelector('.reviews-slider');
+    //     if (sliderContainer) {
+    //         sliderContainer.classList.add('desktop-mode');
+    //     }
+    // }
 }
 
 // Инициализация свайпера при загрузке и изменении размера
