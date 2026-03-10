@@ -319,7 +319,7 @@ section {
 }
 
 .currency-option span {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #fff;
     flex-grow: 1;
@@ -394,13 +394,14 @@ section {
     background-color:#1F1F21;
     border-radius: 12px;
     border: none;
-    padding: 20px 20px;
+    padding: 15px;
     height: 70px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #fff;
     outline: none;
     transition: all 0.3s ease;
+    text-align: right;
 }
 
 .amount-input input:focus {
@@ -421,7 +422,7 @@ section {
 
 .balance-info {
     color: #6D6D6D;
-    font-size: 1rem;
+    font-size: .8rem;
     margin-top: auto;
 }
 
@@ -440,7 +441,7 @@ section {
 .exchange-arrow {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #51edff, #2ad4ff);
+    background: transparent;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -449,11 +450,14 @@ section {
     font-size: 1.8rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 2px solid #2A2A2C;
+    border-top: 0;
+    border-right: 0;
 }
 
 .exchange-arrow:hover {
     transform: rotate(180deg);
-    box-shadow: 0 0 20px rgba(81, 237, 255, 0.7);
+    /*box-shadow: 0 0 20px rgba(81, 237, 255, 0.7);*/
 }
 
 .exchange-summary {
