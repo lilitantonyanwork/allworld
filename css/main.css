@@ -1770,27 +1770,27 @@ section {
 }
 
 .faq-category-btn {
-    background-color: rgba(30, 41, 59, 0.8);
+    background-color: #3b3a3a6e;
+    backdrop-filter: blur(10px);
     color: #cbd5e1;
-    border: 1px solid rgba(81, 237, 255, 0.2);
     padding: 12px 24px;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border: none;
 }
 
 .faq-category-btn:hover {
-    background-color: rgba(81, 237, 255, 0.1);
-    border-color: rgba(81, 237, 255, 0.4);
+    background-color:#51edff;
     transform: translateY(-2px);
+    color: #0a0a0a;
+
 }
 
 .faq-category-btn.active {
-    background: linear-gradient(90deg, #51edff, #2ad4ff);
+    background: #51edff;
     color: #0a0a0a;
     border-color: transparent;
     box-shadow: 0 4px 15px rgba(81, 237, 255, 0.3);
@@ -1803,10 +1803,10 @@ section {
 }
 
 .faq-item {
-    background-color: rgba(30, 41, 59, 0.8);
+    background-color: rgba(23, 23, 24, 0.6);
     border-radius: 15px;
     margin-bottom: 15px;
-    border: 1px solid rgba(81, 237, 255, 0.1);
+    border: 1px solid #333335;
     overflow: hidden;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
@@ -1816,7 +1816,7 @@ section {
 }
 
 .faq-item:hover {
-    border-color: rgba(81, 237, 255, 0.3);
+    background-color: rgba(23, 23, 24, 0.6);
 }
 
 .faq-question {
@@ -1829,7 +1829,7 @@ section {
 }
 
 .faq-question:hover {
-    background-color: rgba(81, 237, 255, 0.05);
+    background-color: rgba(23, 23, 24, 0.6);
 }
 
 .faq-question h3 {
@@ -1842,7 +1842,7 @@ section {
 }
 
 .faq-question i {
-    color: #51edff;
+    color: #747679;
     font-size: 1.2rem;
     transition: transform 0.3s ease;
     flex-shrink: 0;
@@ -1857,18 +1857,15 @@ section {
 .faq-answer p {
     padding: 0 30px 25px;
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.7;
-    color: #cbd5e1;
+    color: #A2A3A5;
 }
 
-.faq-item.active .faq-question {
-    background-color: rgba(81, 237, 255, 0.1);
-    border-bottom: 1px solid rgba(81, 237, 255, 0.2);
-}
+
 
 .faq-item.active .faq-question h3 {
-    color: #51edff;
+    color: #ffffff;
 }
 
 /* Контакты в FAQ */

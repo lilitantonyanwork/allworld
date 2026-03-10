@@ -4,8 +4,12 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AllWorld - Калькулятор обмена</title>
-    <link rel="stylesheet" href="./calculator_files/style.css">
-    <link rel="stylesheet" href="./calculator_files/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="./calculator_files/swiper-bundle.min.css">
 <style>
         .animate {
@@ -67,7 +71,7 @@
         <div class="header-content">
             <div class="logo">
                 <a href="https://allworld.onedaycrm.ru/index">
-                    <h1># All world</h1>
+                    <h1>All world</h1>
                 </a>
             </div>
             
@@ -111,8 +115,7 @@
 </div><section class="hero animate">
     <div class="container">
         <div class="hero-content">
-            <h2>Самый выгодный курс на валюту</h2>
-            <button class="cta-btn">Начать обмен</button>
+            <h2>Обмен</h2>
         </div>
     </div>
 </section>
@@ -126,33 +129,35 @@
                     <div class="exchange-label">
                         <span>Отдаю</span>
                     </div>
-                    
-                    <div class="currency-selector">
-                        <div class="currency-option selected" data-currency="ETH">
-                            <img src="./calculator_files/eth-icon.png" alt="ETH" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
-                            <span>ETH</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        
-                        <div class="currency-dropdown">
-                                                                                            <div class="currency-item" data-currency="BNB">
-                                    <img src="./calculator_files/bnb-icon.png" alt="BNB" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+
+                    <div class="input-group">
+                        <div class="currency-selector">
+                            <div class="currency-option selected" data-currency="ETH">
+                                <img src="./index_files/eth-icon.png" alt="ETH" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+                                <span>ETH</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+
+                            <div class="currency-dropdown">
+                                <div class="currency-item" data-currency="BNB">
+                                    <img src="./index_files/bnb-icon.png" alt="BNB" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
                                     <span>BNB</span>
                                 </div>
-                                                                                                                            <div class="currency-item" data-currency="BTC">
-                                    <img src="./calculator_files/btc-icon.png" alt="BTC" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+                                <div class="currency-item" data-currency="BTC">
+                                    <img src="./index_files/btc-icon.png" alt="BTC" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
                                     <span>BTC</span>
                                 </div>
-                                                                                                                                                                                        <div class="currency-item" data-currency="USDT">
-                                    <img src="./calculator_files/usdt-icon.png" alt="USDT" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+                                <div class="currency-item" data-currency="USDT">
+                                    <img src="./index_files/usdt-icon.png" alt="USDT" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
                                     <span>USDT</span>
                                 </div>
-                                                                                    </div>
-                    </div>
-                    
-                    <div class="amount-input">
-                        <input type="number" id="from-amount" value="5.20" step="0.01" min="0">
-                        <span class="currency-symbol">ETH</span>
+                            </div>
+                        </div>
+
+                        <div class="amount-input">
+                            <input type="number" id="from-amount" value="5.20" step="0.01" min="0">
+                            <!--                            <span class="currency-symbol">ETH</span>-->
+                        </div>
                     </div>
                     
                     <div class="balance-info">
@@ -163,7 +168,9 @@
                 <!-- Стрелка обмена -->
                 <div class="exchange-center">
                     <div class="exchange-arrow">
-                        <i class="fas fa-exchange-alt"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 50 50" fill="none">
+                            <path d="M10.4018 27.0504C9.94928 27.05 9.50889 27.1969 9.14725 27.469C8.78561 27.741 8.5224 28.1235 8.39743 28.5584C8.27245 28.9934 8.2925 29.4572 8.45454 29.8797C8.61659 30.3023 8.91182 30.6606 9.29558 30.9004L14.8956 36.5004C15.0891 36.6938 15.3189 36.8473 15.5718 36.9519C15.8246 37.0565 16.0956 37.1103 16.3692 37.1102C16.6429 37.1101 16.9138 37.0561 17.1666 36.9513C17.4194 36.8465 17.649 36.6929 17.8425 36.4994C18.0359 36.3058 18.1893 36.0761 18.2939 35.8232C18.3985 35.5704 18.4524 35.2994 18.4523 35.0257C18.4522 34.7521 18.3982 34.4811 18.2934 34.2284C18.1885 33.9756 18.035 33.7459 17.8414 33.5525L15.506 31.2192H31.2352C31.7877 31.2192 32.3176 30.9997 32.7083 30.609C33.099 30.2183 33.3185 29.6884 33.3185 29.1358C33.3185 28.5833 33.099 28.0534 32.7083 27.6627C32.3176 27.272 31.7877 27.0525 31.2352 27.0525L10.4018 27.0504ZM39.5977 22.9483C40.0502 22.9488 40.4906 22.8019 40.8522 22.5298C41.2139 22.2577 41.4771 21.8753 41.6021 21.4403C41.7271 21.0054 41.707 20.5416 41.545 20.119C41.3829 19.6965 41.0877 19.3382 40.7039 19.0983L35.1039 13.5004C34.713 13.1098 34.1829 12.8904 33.6303 12.8906C33.0776 12.8908 32.5477 13.1105 32.157 13.5015C31.7664 13.8924 31.547 14.4225 31.5472 14.9751C31.5474 15.5278 31.7672 16.0577 32.1581 16.4483L34.4935 18.7817H18.7643C18.2118 18.7817 17.6819 19.0012 17.2912 19.3919C16.9005 19.7826 16.681 20.3125 16.681 20.865C16.681 21.4175 16.9005 21.9474 17.2912 22.3381C17.6819 22.7288 18.2118 22.9483 18.7643 22.9483H39.5977Z" fill="white"/>
+                        </svg>
                     </div>
                 </div>
                 
@@ -172,33 +179,35 @@
                     <div class="exchange-label">
                         <span>Получаю</span>
                     </div>
-                    
-                    <div class="currency-selector">
-                        <div class="currency-option selected" data-currency="BTC">
-                            <img src="./calculator_files/btc-icon.png" alt="BTC" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
-                            <span>BTC</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        
-                        <div class="currency-dropdown">
-                                                                                            <div class="currency-item" data-currency="BNB">
-                                    <img src="./calculator_files/bnb-icon.png" alt="BNB" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+
+                    <div class="input-group">
+                        <div class="currency-selector">
+                            <div class="currency-option selected" data-currency="BTC">
+                                <img src="./index_files/btc-icon.png" alt="BTC" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+                                <span>BTC</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+
+                            <div class="currency-dropdown">
+                                <div class="currency-item" data-currency="BNB">
+                                    <img src="./index_files/bnb-icon.png" alt="BNB" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
                                     <span>BNB</span>
                                 </div>
-                                                                                                                                                                                        <div class="currency-item" data-currency="ETH">
-                                    <img src="./calculator_files/eth-icon.png" alt="ETH" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+                                <div class="currency-item" data-currency="ETH">
+                                    <img src="./index_files/eth-icon.png" alt="ETH" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
                                     <span>ETH</span>
                                 </div>
-                                                                                                                            <div class="currency-item" data-currency="USDT">
-                                    <img src="./calculator_files/usdt-icon.png" alt="USDT" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
+                                <div class="currency-item" data-currency="USDT">
+                                    <img src="./index_files/usdt-icon.png" alt="USDT" class="currency-icon" onerror="this.src=&#39;images/placeholder-icon.png&#39;">
                                     <span>USDT</span>
                                 </div>
-                                                                                    </div>
-                    </div>
-                    
-                    <div class="amount-input">
-                        <input type="number" id="to-amount" value="0.000005" step="0.000001" min="0">
-                        <span class="currency-symbol">BTC</span>
+                            </div>
+                        </div>
+
+                        <div class="amount-input">
+                            <input type="number" id="to-amount" value="0.000005" step="0.000001" min="0">
+                            <!--                        <span class="currency-symbol">BTC</span>-->
+                        </div>
                     </div>
                     
                     <div class="balance-info">
@@ -215,160 +224,41 @@
             </div>
         </div>
     </div>
-</section><!-- Торговые пары -->
-<section class="trading-pairs">
-    <div class="container">
-        <h2 class="section-title">Популярные торговые пары</h2>
-        
-        <div class="table-container">
-            <table class="pairs-table">
-                <thead>
-                    <tr>
-                        <th>Торговые пары</th>
-                        <th>Последние цены</th>
-                        <th>Изменение за 24 ч</th>
-                        <th>Капитализация</th>
-                        <th>Объем торгов за 24 ч</th>
-                        <th>График</th>
-                        <th>Торговая</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="pair-with-icon">
-                                <img src="./calculator_files/btc-icon.png" alt="BTC" class="pair-icon">
-                                <span>BTC/USDT Bitcoin</span>
-                            </div>
-                        </td>
-                        <td>$65,230.56</td>
-                        <td class="positive">+0.88%</td>
-                        <td>$11,149,301,700,874</td>
-                        <td>$37,169,951,326</td>
-                        <td><img src="./calculator_files/market-charts.png" alt="График" class="chart-img"></td>
-                        <td><button class="trade-btn">Торговать</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="pair-with-icon">
-                                <img src="./calculator_files/eth-icon.png" alt="ETH" class="pair-icon">
-                                <span>ETH/USDT Ethereum</span>
-                            </div>
-                        </td>
-                        <td>$2,540.74</td>
-                        <td class="positive">+1.32%</td>
-                        <td>$283,122,954,710</td>
-                        <td>$14,986,278,893</td>
-                        <td><img src="./calculator_files/market-charts.png" alt="График" class="chart-img"></td>
-                        <td><button class="trade-btn">Торговать</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="pair-with-icon">
-                                <img src="./calculator_files/trx-icon.png" alt="TRX" class="pair-icon">
-                                <span>TRX/USDT Tron</span>
-                            </div>
-                        </td>
-                        <td>$0.1637</td>
-                        <td class="negative">-2.08%</td>
-                        <td>$14,154,817,051</td>
-                        <td>$17,169,951,326</td>
-                        <td><img src="./calculator_files/market-charts.png" alt="График" class="chart-img"></td>
-                        <td><button class="trade-btn">Торговать</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="pair-with-icon">
-                                <img src="./calculator_files/bnb-icon.png" alt="BNB" class="pair-icon">
-                                <span>BNB/USDT Binance Coin</span>
-                            </div>
-                        </td>
-                        <td>$593.40</td>
-                        <td class="negative">-0.03%</td>
-                        <td>$86,563,297,643</td>
-                        <td>$17,169,951,326</td>
-                        <td><img src="./calculator_files/market-charts.png" alt="График" class="chart-img"></td>
-                        <td><button class="trade-btn">Торговать</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="pair-with-icon">
-                                <img src="./calculator_files/xrp-icon.png" alt="XRP" class="pair-icon">
-                                <span>XRP/USDT Ripple</span>
-                            </div>
-                        </td>
-                        <td>$0.5256</td>
-                        <td class="positive">+1.06%</td>
-                        <td>$29,437,532,642</td>
-                        <td>$17,169,951,326</td>
-                        <td><img src="./calculator_files/market-charts.png" alt="График" class="chart-img"></td>
-                        <td><button class="trade-btn">Торговать</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="pair-with-icon">
-                                <img src="./calculator_files/doge-icon.png" alt="DOGE" class="pair-icon">
-                                <span>DOGE/USDT Dogecoin</span>
-                            </div>
-                        </td>
-                        <td>$0.1463</td>
-                        <td class="negative">-1.64%</td>
-                        <td>$21,324,662,756</td>
-                        <td>$17,169,951,326</td>
-                        <td><img src="./calculator_files/market-charts.png" alt="График" class="chart-img"></td>
-                        <td><button class="trade-btn">Торговать</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</section><!-- Футер -->
+</section><!-- Торговые пары --><!-- Футер -->
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <div class="footer-logo">
-                <h3># All world</h3>
-                <p>Самый выгодный курс на валюту</p>
-            </div>
+
             <div class="footer-links">
                 <div class="footer-column">
-                    <h4>Сервис</h4>
                     <ul>
+                        <li><a href="https://allworld.onedaycrm.ru/index" class="active">Главная</a></li>
                         <li><a href="https://allworld.onedaycrm.ru/calculator">Калькулятор</a></li>
                         <li><a href="https://allworld.onedaycrm.ru/reviews">Отзывы</a></li>
                         <li><a href="https://allworld.onedaycrm.ru/faq">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Информация</h4>
-                    <ul>
                         <li><a href="https://allworld.onedaycrm.ru/about">О нас</a></li>
                         <li><a href="https://allworld.onedaycrm.ru/contacts">Контакты</a></li>
-                        <li><a href="https://allworld.onedaycrm.ru/calculator#">Политика безопасности</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-column">
-                    <h4>Контакты</h4>
+                    <p>© 2026 AllWorld. Все права защищены.</p>
                     <ul>
                         <li>
-                          <i class="fas fa-envelope"></i>
-                          <a href="mailto:support@allworld.com" style="text-decoration: none; color: inherit;">support@allworld.com</a>
+
+                            <a href="tel:+7XXXXXXXXXX" style="text-decoration: none; color: inherit;">+7 (XXX) XXX-XX-XX</a>
                         </li>
                         <li>
-                          <i class="fas fa-phone"></i>
-                          <a href="tel:+7XXXXXXXXXX" style="text-decoration: none; color: inherit;">+7 (XXX) XXX-XX-XX</a>
+                            <a href="mailto:support@allworld.com" style="text-decoration: none; color: inherit;">support@allworld.com</a>
                         </li>
-                        <li><i class="fas fa-clock"></i> Поддержка 24/7</li>
+
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 AllWorld. Все права защищены.</p>
-        </div>
+
     </div>
 </footer>
-
 <script src="./calculator_files/swiper-bundle.min.js"></script>
 <script src="./calculator_files/script.js"></script>
 <script src="./calculator_files/calculator.js"></script>
