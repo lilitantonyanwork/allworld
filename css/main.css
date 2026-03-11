@@ -1438,6 +1438,11 @@ section {
     .currency-option {
         padding: 12px 16px;
     }
+    .exchange-section .balance-info-right{
+        gap: 0;
+        justify-content: space-between;
+        width: 100%;
+    }
 .reviews{
     padding-bottom: 0;
 }
