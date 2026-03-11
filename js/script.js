@@ -66,10 +66,13 @@ function initReviewsSwiper() {
                     prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
-                    640: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    600: {
                         slidesPerView: 2,
                     },
-                    768: {
+                    769: {
                         slidesPerView: 3,
                     },
 
