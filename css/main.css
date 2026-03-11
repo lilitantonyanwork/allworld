@@ -1188,7 +1188,6 @@ section {
     }
 
     .exchange-box {
-        flex-direction: column;
         gap: 20px;
     }
     .header.floating .header-container{
@@ -1199,20 +1198,8 @@ section {
         /*order: -1;*/
         padding: 20px 0;
     }
-    .input-group{
-        justify-content: center;
-    }
-    .balance-info{
-        justify-content: center;
-        display: flex;
-    }
-    .exchange-section .balance-info-right{
-        justify-content: center;
-        gap: 100px;
-    }
-    .exchange-label{
-        text-align: center;
-    }
+
+
     .exchange-arrow {
         transform: rotate(90deg);
     }
@@ -1328,10 +1315,6 @@ section {
         align-items: stretch;
     }
 
-    .exchange-action-btn {
-        width: 100%;
-    }
-
     .pairs-table {
         font-size: 0.9rem;
     }
@@ -1380,6 +1363,11 @@ section {
     }
     .feature-card:nth-child(4), .feature-card:nth-child(5){
        max-width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .exchange-box{
+        flex-direction: column;
     }
 }
 
