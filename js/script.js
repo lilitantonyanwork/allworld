@@ -47,7 +47,7 @@ function initReviewsSwiper() {
     // if (window.innerWidth <= 768) {
     //     if (!reviewsSwiper) {
             reviewsSwiper = new Swiper('.reviews-slider', {
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 20,
                 loop: true,
                 autoplay: {
@@ -68,7 +68,11 @@ function initReviewsSwiper() {
                 breakpoints: {
                     640: {
                         slidesPerView: 2,
-                    }
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+
                 }
             });
         // }

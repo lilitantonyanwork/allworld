@@ -56,22 +56,56 @@ section {
     width: 100%;
 }
 
-.header.floating {
-    border-radius: 16px;
-    border: 1px solid rgba(81, 237, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    padding: 15px 0;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    margin: 0 auto;
-    width: calc(100% - 40px);
-    max-width: 1200px;
+.header-container{
+    width: 100%;
+    max-width: 100%;
+    transition: all .3s;
+    padding-inline: 0;
 }
+
+.header.floating {
+    /*border-radius: 16px;*/
+    /*border: 1px solid rgba(81, 237, 255, 0.2);*/
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);*/
+    /*padding: 15px 0;*/
+    /*backdrop-filter: blur(10px);*/
+    /*-webkit-backdrop-filter: blur(10px);*/
+    /*margin: 0 auto;*/
+    /*width: calc(100% - 40px);*/
+    /*max-width: 1200px;*/
+}
+
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+    transition: all .3s;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+
+}
+.nav-desktop{
+    margin-left: 30px;
+}
+.header.floating .header-container{
+    padding-inline: calc(.25rem * 30);
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.header.floating .header-content{
+    padding: 15px 25px;
+    border-radius: 16px;
+    border: 1px solid #333335;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.header.floating .header-content .nav-desktop ul li a{
+    font-size: .8rem;
 }
 
 .logo h1 {
@@ -79,30 +113,34 @@ section {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: 1px;
+    transition: all .3s;
     background: linear-gradient(90deg, #51edff, #2ad4ff);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
     font-family: 'Manrope', sans-serif;
 }
+
+.header.floating .logo h1{
+    font-size: 1.5rem;
+}
+
 
 .nav-desktop ul {
     display: flex;
     list-style: none;
+    gap: 30px;
 }
 
-.nav-desktop ul li {
-    margin: 0 15px;
-}
 
 .nav-desktop ul li a {
     text-decoration: none;
     color: #FBFBFC;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 0;
     border-radius: 8px;
-    transition: all 0.3s ease;
     font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    transition: all .3s;
 }
 
 .nav-desktop ul li a:hover,
@@ -126,6 +164,7 @@ section {
     width: 85px;
     transition: all 0.3s ease;
     font-family: 'Manrope', sans-serif;
+    margin-left: auto;
 }
 
 .login-btn:hover {
@@ -256,12 +295,8 @@ section {
     max-width: 850px;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(21, 21, 23, 0.6);
-    border-radius: 20px;
-    padding: 30px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid #28282A;
+
+
 }
 
 .exchange-box {
@@ -270,6 +305,12 @@ section {
     align-items: stretch;
     margin-bottom: 30px;
     gap: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #28282A;
+    background-color: rgba(21, 21, 23, 0.6);
+    border-radius: 20px;
 }
 
 .exchange-section {
@@ -277,6 +318,11 @@ section {
     border-radius: 16px;
     display: flex;
     flex-direction: column;
+}
+.exchange-section .balance-info-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .exchange-label {
@@ -291,7 +337,7 @@ section {
 
 .currency-selector {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .currency-option {
@@ -386,7 +432,7 @@ section {
 
 .amount-input {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .amount-input input {
@@ -423,7 +469,7 @@ section {
 .balance-info {
     color: #6D6D6D;
     font-size: .8rem;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .balance-amount {
@@ -464,14 +510,12 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .exchange-rate {
-    font-size: 1.3rem;
+    font-size: .8rem;
     font-weight: 700;
-    color: #51edff;
+    color: #6D6D6D;
 }
 
 .exchange-action-btn {
@@ -479,12 +523,18 @@ section {
     color: #51edff;
     padding: 18px 50px;
     border-radius: 12px;
-    font-size: 1rem;
+    font-size: .8rem;
+    width: 250px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 2px solid #51edff;
     letter-spacing: 0.5px;
+    margin: 0 auto;
 }
 
 .exchange-action-btn:hover {
@@ -1028,8 +1078,28 @@ section {
     border-top: 1px solid #213140;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
+    position: relative;
+    overflow: hidden;
 
+}
+.footer-effect{
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    bottom: 0;
+}
+.footer-effect:after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(0,200,255,.35), transparent 60%);
+    filter: blur(80px);
+    opacity: .6;
+    height: 500px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
 .footer-content {
     width: 100%;
 }
@@ -1057,7 +1127,7 @@ section {
 }
 .footer-column{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 .footer-column h4 {
@@ -1078,7 +1148,7 @@ section {
 
 .footer-column ul li a {
     text-decoration: none;
-    color: #94a3b8;
+    color: #94a3b8!important;
     transition: color 0.3s ease;
     font-size: .8rem;
 }

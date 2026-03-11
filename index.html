@@ -65,13 +65,14 @@
         }
         .amount-input {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 0;
         }
     </style><style></style></head>
 <body>
 <div class="background-image"></div>
 <header class="header" id="mainHeader">
     <div class="container">
+        <div class="header-container">
         <div class="header-content">
             <div class="logo">
                 <a href="https://allworld.onedaycrm.ru/index">
@@ -98,6 +99,7 @@
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
+        </div>
         </div>
     </div>
 </header>
@@ -216,16 +218,21 @@
                     </div>
                     </div>
                     
-                    <div class="balance-info">
-                        В наличии: <span class="balance-amount">0.45000000 BTC</span>
+                    <div class="balance-info balance-info-right">
+                        <div>
+                            В наличии: <span class="balance-amount">0.45000000 BTC</span>
+                        </div>
+
+
+                        <div class="exchange-rate">
+                            <span>= $13186.63</span>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="exchange-summary">
-                <div class="exchange-rate">
-                    <span>= $13186.63</span>
-                </div>
+
                 <button class="exchange-action-btn">Обменять сейчас</button>
             </div>
         </div>
@@ -399,17 +406,8 @@
 <section class="reviews">
         <h2 class="section-title">Отзывы о сервисе</h2>
         
-        <div class="swiper reviews-slider desktop-mode swiper-backface-hidden">
+        <div class="swiper reviews-slider  swiper-backface-hidden">
             <div class="swiper-wrapper" id="swiper-wrapper-9a2f7c8969561ae8" aria-live="off">
-                
-                
-                
-                
-                
-                
-                
-                
-                
             <div class="swiper-slide review-slide" role="group" aria-label="1 / 5">
                     <div class="review-card">
                         <div class="review-content">
@@ -515,6 +513,9 @@
 
     </div>
 </footer>
+<div class="footer-effect">
+
+</div>
 
 <!--<script src="./index_files/swiper-bundle.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
