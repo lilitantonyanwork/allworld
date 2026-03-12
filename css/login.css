@@ -40,9 +40,9 @@
 }
 
 .auth-tab.active {
-    color: #8F9193;
-    background-color: #1616185e;
-    border:1px solid #272729;
+    color: #fff;
+    background: rgb(22, 22, 24, .18);
+    border: 1px solid #272729;
 }
 
 .auth-form {
