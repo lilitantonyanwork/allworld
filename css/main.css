@@ -2195,9 +2195,18 @@ section {
     }
 
     .faq-question h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    .form-group.half{
+        width: 100%;
+    }
+    .form-row     .form-group{
+        width: 100%;
     }
 
+    .form-group{
+        width: 100% !important;
+    }
     .faq-answer p {
         padding: 0 20px 18px;
     }
@@ -2213,11 +2222,14 @@ section {
     .faq-contact-content p {
         font-size: 1rem;
     }
+    body .contact-link, body .hours-time{
+        font-size: 1.5rem;
+    }
 }
 
 /* Стили для страницы контактов */
 .contacts-section {
-    padding: 60px 0;
+    padding: 0 0 60px;
 }
 
 .contacts-wrapper {
@@ -2518,6 +2530,19 @@ section {
 }
 
 @media (max-width: 768px) {
+    .about-card{
+        width: 100%;
+    }
+    .hero{
+        padding-top: 40px;
+    }
+    .contact-content{
+        flex-direction: column;
+      gap: 40px;
+    }
+    .about-grid{
+        flex-wrap: wrap;
+    }
     .contact-cards {
         grid-template-columns: 1fr;
     }
