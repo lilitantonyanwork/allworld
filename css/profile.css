@@ -1,7 +1,7 @@
 /* Profile Page Styles */
 
 .profile-hero {
-
+    padding: 20px 0;
 }
 
 .profile-header {
@@ -93,7 +93,7 @@
 
 /* Stats */
 .profile-stats {
-    padding: 40px 0;
+    padding: 0;
 }
 
 .stats-grid {
