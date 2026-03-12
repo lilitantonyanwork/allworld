@@ -516,17 +516,73 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .profile-avatar {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
     
     .profile-title h1 {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
+        text-align: left;
     }
-    
+    .avatar-placeholder{
+        font-size: 1rem;
+    }
+    .profile-telegram{
+        text-align: left;
+        font-size: .9rem;
+    }
+    .profile-actions{
+        margin-left: auto;
+    }
+    .logout-btn{
+        font-size: .8rem;
+        padding: 8px 16px;
+    }
+    .profile-stats{
+        padding: 20px 0;
+    }
+    .stat-card{
+        padding: 10px;
+        width: calc(100%/2 - 5px);
+    }
+    .stats-grid{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .stat-icon{
+        width: 30px;
+        height: 30px;
+        font-size: .8rem;
+    }
+    .stat-value{
+        font-size: 1rem;
+    }
+    .profile-content{
+        padding: 20px 0;
+    }
+    .profile-tabs{
+        flex-direction: row;
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+    .stat-label{
+        font-size: .8rem;
+    }
+
+    .profile-email{
+        font-size: .9rem;
+        text-align: left;
+    }
     .settings-form {
         padding: 30px 20px;
+    }
+    .profile-header{
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }

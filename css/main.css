@@ -1372,101 +1372,6 @@ section {
     }
 }
 
-@media (max-width: 480px) {
-    .header {
-        margin: 0 10px;
-        width: calc(100% - 20px);
-        top: 10px;
-    }
-
-    .header.floating {
-        padding: 10px 0;
-        border-radius: 12px;
-    }
-
-    .hero {
-        padding: 80px 0 40px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.8rem;
-    }
-
-    .cta-btn,
-    .exchange-action-btn,
-    .exchange-start-btn {
-        width: 100%;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .feature-card {
-        padding: 30px 20px;
-    }
-
-    .feature-icon {
-        font-size: 3rem;
-    }
-
-    .security-content h2,
-    .monitoring h3 {
-        font-size: 1.8rem;
-    }
-
-    .security-content p,
-    .monitoring p {
-        font-size: 1rem;
-    }
-
-    .exchange-box {
-        gap: 10px;
-    }
-
-    .currency-option {
-        padding: 12px 16px;
-    }
-    .exchange-section .balance-info-right{
-        gap: 0;
-        justify-content: space-between;
-        width: 100%;
-    }
-.reviews{
-    padding-bottom: 0;
-}
-
-    .header.floating .header-container {
-        padding-inline: 0;
-    }
-    .footer-column:last-child{
-        flex-direction: column-reverse;
-    }
-    .currency-symbol {
-        font-size: 1.3rem;
-        right: 16px;
-    }
-    .footer-column ul{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .review-card {
-        padding: 25px 20px;
-    }
-
-    .review-content p {
-        font-size: 1rem;
-    }
-
-    .cta-content h2 {
-        font-size: 1.6rem;
-    }
-
-    .cta-content {
-        padding: 50px 20px;
-    }
-}
 
 
 /* Стили для страницы отзывов */
@@ -2567,9 +2472,20 @@ section {
         align-items: flex-start;
         gap: 10px;
     }
+    .detail-row{
+        position: relative;
+    }
+    .copy-line{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
+    .copy-line{
+        right: 0;
+    }
     .contact-card {
         flex-direction: column;
         align-items: flex-start;
@@ -2915,6 +2831,12 @@ section {
 .detail-row:last-child {
     border-bottom: none;
 }
+.copy-line{
+    background: transparent;
+    border: none;
+    color: #6D6D6D;
+    cursor: pointer;
+}
 
 .detail-label {
     width: 120px;
@@ -2960,16 +2882,29 @@ section {
 
     .order-exchange-box {
         flex-direction: column;
-        gap: 20px;
+        gap: 5px;
         padding: 20px;
+        margin-bottom: 15px;
     }
+    .exchange-arrow-icon{
+        font-size: 1rem;
+    }
+    .direction-label{
+        margin-bottom: 0;
+    }
+
 
     .exchange-arrow-icon {
         transform: rotate(90deg);
     }
+    .order-info-message p{
+        font-size: .8rem;
+    }
 
     .order-info-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
     }
 
     .order-actions {
@@ -2977,7 +2912,7 @@ section {
     }
 
     .order-header {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
         align-items: flex-start;
     }
@@ -3008,4 +2943,108 @@ section {
     .order-details-card {
         padding: 30px 20px;
     }
-}
+        .header {
+            margin: 0 10px;
+            width: calc(100% - 20px);
+            top: 10px;
+        }
+        .hero{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .hero-subtitle{
+            font-size: 1rem;
+        }
+
+        .header.floating {
+            padding: 10px 0;
+            border-radius: 12px;
+        }
+
+        .hero {
+            padding: 20px 0 40px;
+        }
+        section{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.8rem;
+        }
+
+        .cta-btn,
+        .exchange-action-btn,
+        .exchange-start-btn {
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .feature-card {
+            padding: 30px 20px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+        }
+
+        .security-content h2,
+        .monitoring h3 {
+            font-size: 1.8rem;
+        }
+
+        .security-content p,
+        .monitoring p {
+            font-size: 1rem;
+        }
+
+        .exchange-box {
+            gap: 10px;
+        }
+
+        .currency-option {
+            padding: 12px 16px;
+        }
+        .exchange-section .balance-info-right{
+            gap: 0;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .reviews{
+            padding-bottom: 0;
+        }
+
+        .header.floating .header-container {
+            padding-inline: 0;
+        }
+        .footer-column:last-child{
+            flex-direction: column-reverse;
+        }
+        .currency-symbol {
+            font-size: 1.3rem;
+            right: 16px;
+        }
+        .footer-column ul{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .review-card {
+            padding: 25px 20px;
+        }
+
+        .review-content p {
+            font-size: 1rem;
+        }
+
+        .cta-content h2 {
+            font-size: 1.6rem;
+        }
+
+        .cta-content {
+            padding: 50px 20px;
+        }
+    }

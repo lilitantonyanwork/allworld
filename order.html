@@ -176,18 +176,30 @@
                     <div class="detail-row">
                         <span class="detail-label">Банк:</span>
                         <span class="detail-value">АО "Т-Банк"</span>
+                        <button class="copy-line">
+                            <i class="fas fa-copy"></i>
+                        </button>
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">Счет:</span>
                         <span class="detail-value">4081 7810 1234 5678 9012</span>
+                        <button class="copy-line" >
+                            <i class="fas fa-copy"></i>
+                        </button>
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">Получатель:</span>
                         <span class="detail-value">ООО "All World"</span>
+                        <button class="copy-line" >
+                            <i class="fas fa-copy"></i>
+                        </button>
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">Назначение:</span>
                         <span class="detail-value">Оплата по заявке ORD-20260218-000002</span>
+                        <button class="copy-line" >
+                            <i class="fas fa-copy"></i>
+                        </button>
                     </div>
                 </div>
                 
@@ -253,6 +265,21 @@ function copyPaymentDetails() {
         alert('Не удалось скопировать реквизиты');
     });
 }
+function copyLine(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert('Скопирован в буфер обмена');
+    }).catch(() => {
+        alert('Не удалось скопировать');
+    });
+}
+
+document.querySelectorAll('.copy-line').forEach(btn => {
+    btn.addEventListener('click', function () {
+        const span = this.previousElementSibling;
+        const text = span.innerText;
+        copyLine(text);
+    });
+});
 
 // Автоматическое обновление статуса каждые 30 секунд
 setInterval(function() {
