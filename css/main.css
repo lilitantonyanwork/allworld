@@ -37,11 +37,25 @@ section {
     background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
+    animation: moveBg 100s linear infinite;
     background-repeat: no-repeat;
     opacity: 0.15;
     z-index: 0;
     pointer-events: none;
 }
+
+@keyframes moveBg {
+    0% {
+        background-position: center top;
+    }
+    50% {
+        background-position: center bottom;
+    }
+    100% {
+        background-position: center top;
+    }
+}
+
 
 /* Шапка */
 /* Шапка */
