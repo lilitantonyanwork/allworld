@@ -103,7 +103,7 @@
 .form-group input:focus {
     outline: none;
     border-color: #51edff;
-    box-shadow: 0 0 0 3px rgba(81, 237, 255, 0.2);
+
 }
 
 .form-group input::placeholder {
